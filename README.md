@@ -28,4 +28,4 @@ OpenTofu configuration for my Cloudflare account.
    tofu apply cloudflare.tfplan
    ```
 
-5. Commit `terraform.tfstate`.
+5. Commit `backend/terraform.tfstate`.
