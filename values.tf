@@ -79,4 +79,29 @@ locals {
       ttl   = 1
     }
   }
+
+  ruialves_net_email_subaddressing = false
+
+  # A new destination address gets a verification email. Rules forward to it only after verification.
+  ruialves_net_email_destination_addresses = {
+    gmail = "ruialves.esrt.98@gmail.com"
+  }
+
+  ruialves_net_email_routing_rules = {
+    rui = {
+      name        = "Forward rui@ruialves.net to Gmail"
+      address     = "rui@ruialves.net"
+      destination = "gmail"
+      enabled     = true
+      priority    = 0
+    }
+  }
+
+  # When the catch-all is disabled, Cloudflare rejects mail to addresses that no rule matches.
+  ruialves_net_email_catch_all = {
+    name        = "Catch-all"
+    enabled     = false
+    action      = "drop"
+    destination = null
+  }
 }
