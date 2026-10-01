@@ -14,3 +14,18 @@ resource "cloudflare_dns_record" "this" {
   ttl     = each.value.ttl
   proxied = each.value.proxied
 }
+
+resource "cloudflare_dns_record" "caa" {
+  for_each = var.caa_records
+
+  zone_id = data.cloudflare_zone.this.id
+  name    = each.value.name
+  type    = "CAA"
+  ttl     = each.value.ttl
+
+  data = {
+    flags = each.value.flags
+    tag   = each.value.tag
+    value = each.value.value
+  }
+}
