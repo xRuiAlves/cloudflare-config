@@ -29,3 +29,8 @@ resource "cloudflare_dns_record" "caa" {
     value = each.value.value
   }
 }
+
+resource "cloudflare_zone_dnssec" "this" {
+  zone_id = data.cloudflare_zone.this.id
+  status  = var.dnssec_status
+}
