@@ -1,4 +1,4 @@
-# Cloudflare
+# Cloudflare configs
 
 OpenTofu configuration for my Cloudflare account.
 
