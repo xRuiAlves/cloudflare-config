@@ -5,8 +5,8 @@ locals {
   ruialves_net_dns_records = {
     apex = {
       name    = "ruialves.net"
-      type    = "A"
-      content = "75.2.60.5"
+      type    = "CNAME"
+      content = "apex-loadbalancer.netlify.com"
       ttl     = 1
       proxied = false
     }
