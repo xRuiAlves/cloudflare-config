@@ -1,0 +1,26 @@
+# OpenTofu working directory
+.terraform/
+
+# State backups and lock info. Git tracks terraform.tfstate itself.
+*.tfstate.backup
+.terraform.tfstate.lock.info
+
+# Plan files
+*.tfplan
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration
+.terraformrc
+terraform.rc
+
+# macOS
+.DS_Store
