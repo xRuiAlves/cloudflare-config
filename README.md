@@ -12,14 +12,14 @@ At the moment, it manages the DNS records of `ruialves.net`.
 | `provider.tf` | The Cloudflare provider |
 | `main.tf` | The module instances |
 | `values.tf` | The values that the module instances use, as locals |
-| `modules/ruialves-net` | The DNS records of `ruialves.net` |
+| `modules/ruialves-net` | The DNS records and the DNSSEC status of `ruialves.net` |
 
 ## Prerequisites
 
 - OpenTofu 1.12 or later
 - A Cloudflare API token on `ruialves.net` with these permissions:
   - `Zone > Zone > Read`, to look up the zone ID from the zone name
-  - `Zone > DNS > Edit`, to manage the DNS records
+  - `Zone > DNS > Edit`, to manage the DNS records and DNSSEC
 
 The provider reads the token from the `CLOUDFLARE_API_TOKEN` environment variable. Do not put the token in a file in this repository.
 
