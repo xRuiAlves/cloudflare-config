@@ -3,4 +3,5 @@ module "ruialves_net" {
 
   zone_name   = local.ruialves_net_zone_name
   dns_records = local.ruialves_net_dns_records
+  caa_records = local.ruialves_net_caa_records
 }
