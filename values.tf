@@ -1,5 +1,6 @@
 locals {
-  ruialves_net_zone_name = "ruialves.net"
+  ruialves_net_zone_name     = "ruialves.net"
+  ruialves_net_dnssec_status = "active"
 
   # Email Routing manages the MX records and the cf2024-1._domainkey DKIM record, so they are not here.
   ruialves_net_dns_records = {
