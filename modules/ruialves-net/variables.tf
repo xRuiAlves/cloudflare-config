@@ -24,3 +24,8 @@ variable "caa_records" {
     ttl   = number
   }))
 }
+
+variable "dnssec_status" {
+  description = "DNSSEC status of the zone, active or disabled"
+  type        = string
+}
