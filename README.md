@@ -11,8 +11,7 @@ At the moment, it manages the DNS records of `ruialves.net`.
 | `config.tf` | The OpenTofu version, the provider version, and the local backend |
 | `provider.tf` | The Cloudflare provider |
 | `main.tf` | The module instances |
-| `variables.tf` | The input variables |
-| `variables.tfvars` | The input values |
+| `values.tf` | The values that the module instances use, as locals |
 | `modules/ruialves-net` | The DNS records of `ruialves.net` |
 
 ## Prerequisites
@@ -41,7 +40,7 @@ The provider reads the token from the `CLOUDFLARE_API_TOKEN` environment variabl
 3. Make a plan:
 
    ```sh
-   tofu plan -var-file=variables.tfvars -out=cloudflare.tfplan
+   tofu plan -out=cloudflare.tfplan
    ```
 
 4. Apply the plan:
@@ -60,7 +59,7 @@ Also commit `.terraform.lock.hcl`. It pins the provider checksums.
 
 ## DNS records
 
-To add, change, or remove a DNS record, edit `ruialves_net_dns_records` in `variables.tfvars`. Then make a plan and apply it.
+To add, change, or remove a DNS record, edit `ruialves_net_dns_records` in `values.tf`. Then make a plan and apply it.
 
 Use the full name of the record, for example `blog.ruialves.net`. A TTL of `1` means Auto.
 
