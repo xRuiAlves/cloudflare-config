@@ -1,5 +1,5 @@
-variable "ruialves_net_zone_id" {
-  description = "ID of the ruialves.net zone"
+variable "ruialves_net_zone_name" {
+  description = "Name of the ruialves.net zone, used to look up its ID"
   type        = string
 }
 
