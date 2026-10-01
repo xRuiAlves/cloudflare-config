@@ -13,3 +13,14 @@ variable "dns_records" {
     proxied = bool
   }))
 }
+
+variable "caa_records" {
+  description = "CAA records of the zone, keyed by a short name. A TTL of 1 means Auto."
+  type = map(object({
+    name  = string
+    flags = number
+    tag   = string
+    value = string
+    ttl   = number
+  }))
+}
