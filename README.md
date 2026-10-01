@@ -63,6 +63,16 @@ To add, change, or remove a DNS record, edit `ruialves_net_dns_records` in `valu
 
 Use the full name of the record, for example `blog.ruialves.net`. A TTL of `1` means Auto.
 
+CAA records are in a different map, `ruialves_net_caa_records`, because they have flags, a tag, and a value, not a content string. The CAA records allow these certificate authorities to issue certificates for `ruialves.net`:
+
+| Value | Certificate authority | Used by |
+|---|---|---|
+| `letsencrypt.org` | Let's Encrypt | Netlify and Cloudflare Universal SSL |
+| `pki.goog` | Google Trust Services | Cloudflare Universal SSL |
+| `ssl.com` | SSL.com | Cloudflare Universal SSL |
+
+If you add a site on a host that uses a different certificate authority, add a CAA record for that certificate authority. If you do not, the host cannot issue a certificate for the site.
+
 Email Routing manages these records:
 
 - The three `MX` records
