@@ -18,6 +18,13 @@ locals {
       ttl     = 1
       proxied = false
     }
+    chess = {
+      name    = "chess.ruialves.net"
+      type    = "CNAME"
+      content = "rui-chess-games.netlify.app"
+      ttl     = 1
+      proxied = false
+    }
     python-workshop = {
       name    = "python-workshop.ruialves.net"
       type    = "CNAME"
