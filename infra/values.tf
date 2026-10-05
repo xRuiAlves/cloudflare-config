@@ -101,7 +101,15 @@ locals {
   # The Cloudflare GitHub app is connected to this GitHub account once, in the dashboard.
   ruialves_net_pages_github_owner = "xRuiAlves"
 
-  ruialves_net_pages_projects = {}
+  ruialves_net_pages_projects = {
+    blog = {
+      repository        = "blog"
+      production_branch = "main"
+      build_command     = "npm run build"
+      output_directory  = "dist"
+      domains           = ["blog.ruialves.net"]
+    }
+  }
 
   ruialves_net_email_subaddressing = false
 
