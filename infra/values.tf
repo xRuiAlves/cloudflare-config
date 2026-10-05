@@ -9,9 +9,9 @@ locals {
     apex = {
       name    = "ruialves.net"
       type    = "CNAME"
-      content = "apex-loadbalancer.netlify.com"
+      content = "personal-page-e8l.pages.dev"
       ttl     = 1
-      proxied = false
+      proxied = true
     }
     blog = {
       name    = "blog.ruialves.net"
