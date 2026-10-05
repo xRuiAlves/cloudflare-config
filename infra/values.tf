@@ -44,9 +44,9 @@ locals {
     www = {
       name    = "www.ruialves.net"
       type    = "CNAME"
-      content = "rui-alves-resume.netlify.app"
+      content = "ruialves.net"
       ttl     = 1
-      proxied = false
+      proxied = true
     }
     dmarc = {
       name    = "_dmarc.ruialves.net"
