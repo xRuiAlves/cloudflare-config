@@ -3,6 +3,8 @@ locals {
   ruialves_net_dnssec_status = "active"
 
   # Email Routing manages the MX records and the cf2024-1._domainkey DKIM record, so they are not here.
+  # Cloudflare Pages sites use a proxied CNAME to <project>.pages.dev. Add the custom domain to the Pages project
+  # before pointing the record at it, or the site returns 522 errors.
   ruialves_net_dns_records = {
     apex = {
       name    = "ruialves.net"
@@ -14,9 +16,9 @@ locals {
     blog = {
       name    = "blog.ruialves.net"
       type    = "CNAME"
-      content = "rui-alves-blog.netlify.app"
+      content = "blog-16j.pages.dev"
       ttl     = 1
-      proxied = false
+      proxied = true
     }
     chess = {
       name    = "chess.ruialves.net"
