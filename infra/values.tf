@@ -109,6 +109,13 @@ locals {
       output_directory  = "dist"
       domains           = ["blog.ruialves.net"]
     }
+    chess-games = {
+      repository        = "chess-games"
+      production_branch = "main"
+      build_command     = "npm run build"
+      output_directory  = "dist"
+      domains           = ["chess.ruialves.net"]
+    }
   }
 
   ruialves_net_email_subaddressing = false
