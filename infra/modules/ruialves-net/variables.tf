@@ -25,6 +25,15 @@ variable "caa_records" {
   }))
 }
 
+variable "redirect_rules" {
+  description = "Redirect Rules of the zone, keyed by a short name. Each one sends every path of a hostname to a target origin with a 301."
+  type = map(object({
+    description = string
+    hostname    = string
+    target      = string
+  }))
+}
+
 variable "dnssec_status" {
   description = "DNSSEC status of the zone, active or disabled"
   type        = string

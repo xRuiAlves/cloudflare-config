@@ -89,6 +89,15 @@ locals {
     }
   }
 
+  # Redirect Rules run at the edge, so each hostname needs a proxied DNS record.
+  ruialves_net_redirect_rules = {
+    www = {
+      description = "Redirect www.ruialves.net to ruialves.net"
+      hostname    = "www.ruialves.net"
+      target      = "https://ruialves.net"
+    }
+  }
+
   ruialves_net_email_subaddressing = false
 
   # A new destination address gets a verification email. Rules forward to it only after verification.
