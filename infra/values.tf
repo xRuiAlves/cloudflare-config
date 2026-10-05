@@ -116,6 +116,13 @@ locals {
       output_directory  = "dist"
       domains           = ["chess.ruialves.net"]
     }
+    personal-page = {
+      repository        = "personal-page"
+      production_branch = "main"
+      build_command     = ""
+      output_directory  = ""
+      domains           = ["ruialves.net"]
+    }
   }
 
   ruialves_net_email_subaddressing = false
