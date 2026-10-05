@@ -17,3 +17,11 @@ module "ruialves_net_email" {
   routing_rules         = local.ruialves_net_email_routing_rules
   catch_all             = local.ruialves_net_email_catch_all
 }
+
+module "ruialves_net_pages" {
+  source = "./modules/ruialves-net-pages"
+
+  zone_name    = local.ruialves_net_zone_name
+  github_owner = local.ruialves_net_pages_github_owner
+  projects     = local.ruialves_net_pages_projects
+}
