@@ -119,8 +119,6 @@ locals {
     personal-page = {
       repository        = "personal-page"
       production_branch = "main"
-      build_command     = ""
-      output_directory  = ""
       domains           = ["ruialves.net"]
     }
   }
