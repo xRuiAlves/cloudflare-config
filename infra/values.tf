@@ -23,9 +23,9 @@ locals {
     chess = {
       name    = "chess.ruialves.net"
       type    = "CNAME"
-      content = "rui-chess-games.netlify.app"
+      content = "chess-games-agt.pages.dev"
       ttl     = 1
-      proxied = false
+      proxied = true
     }
     python-workshop = {
       name    = "python-workshop.ruialves.net"
