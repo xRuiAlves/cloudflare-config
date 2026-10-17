@@ -30,9 +30,9 @@ locals {
     python-workshop = {
       name    = "python-workshop.ruialves.net"
       type    = "CNAME"
-      content = "ws-python-ni.netlify.app"
+      content = "python-workshop.pages.dev"
       ttl     = 1
-      proxied = false
+      proxied = true
     }
     wvat-presentation = {
       name    = "wvat-presentation.ruialves.net"
