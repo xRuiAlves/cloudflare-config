@@ -9,10 +9,11 @@ variable "github_owner" {
 }
 
 variable "projects" {
-  description = "Pages projects, keyed by project name. Each one deploys a GitHub repository on push to its production branch. Without a build command and output directory, the repository root is published as is. Domains are the project's custom domains."
+  description = "Pages projects, keyed by project name. Each one deploys a GitHub repository on push to its production branch. The build runs in the root directory, the repository root by default. Without a build command and output directory, the root directory is published as is. Domains are the project's custom domains."
   type = map(object({
     repository        = string
     production_branch = string
+    root_directory    = optional(string)
     build_command     = optional(string)
     output_directory  = optional(string)
     domains           = set(string)

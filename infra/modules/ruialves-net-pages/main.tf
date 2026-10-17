@@ -17,9 +17,10 @@ resource "cloudflare_pages_project" "this" {
   production_branch = each.value.production_branch
 
   # A project without a build has no build config. Setting empty strings would show a change on every plan.
-  build_config = each.value.build_command == null && each.value.output_directory == null ? null : {
+  build_config = each.value.build_command == null && each.value.output_directory == null && each.value.root_directory == null ? null : {
     build_command   = each.value.build_command
     destination_dir = each.value.output_directory
+    root_dir        = each.value.root_directory
   }
 
   source = {
