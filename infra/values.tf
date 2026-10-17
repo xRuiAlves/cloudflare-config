@@ -37,9 +37,9 @@ locals {
     wvat-presentation = {
       name    = "wvat-presentation.ruialves.net"
       type    = "CNAME"
-      content = "wvat-presentation.netlify.app"
+      content = "wvat-presentation.pages.dev"
       ttl     = 1
-      proxied = false
+      proxied = true
     }
     www = {
       name    = "www.ruialves.net"
