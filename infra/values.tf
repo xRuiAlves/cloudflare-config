@@ -126,6 +126,13 @@ locals {
       production_branch = "master"
       domains           = ["python-workshop.ruialves.net"]
     }
+    # The slides are committed prebuilt in output/. Running there skips installing the generator's dependencies.
+    wvat-presentation = {
+      repository        = "wvat-presentation"
+      production_branch = "master"
+      root_directory    = "output"
+      domains           = ["wvat-presentation.ruialves.net"]
+    }
   }
 
   ruialves_net_email_subaddressing = false
