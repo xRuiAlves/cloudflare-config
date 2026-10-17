@@ -121,6 +121,11 @@ locals {
       production_branch = "main"
       domains           = ["ruialves.net"]
     }
+    python-workshop = {
+      repository        = "python-workshop"
+      production_branch = "master"
+      domains           = ["python-workshop.ruialves.net"]
+    }
   }
 
   ruialves_net_email_subaddressing = false
