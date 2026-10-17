@@ -64,7 +64,7 @@ locals {
     }
   }
 
-  # Netlify uses Let's Encrypt. Cloudflare Universal SSL uses Let's Encrypt, Google Trust Services, and SSL.com.
+  # Cloudflare Universal SSL uses Let's Encrypt, Google Trust Services, and SSL.com.
   ruialves_net_caa_records = {
     letsencrypt = {
       name  = "ruialves.net"
