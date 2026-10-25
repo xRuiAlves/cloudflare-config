@@ -116,6 +116,13 @@ locals {
       output_directory  = "dist"
       domains           = ["chess.ruialves.net"]
     }
+    music = {
+      repository        = "music"
+      production_branch = "main"
+      build_command     = "npm run build"
+      output_directory  = "dist"
+      domains           = ["music.ruialves.net"]
+    }
     personal-page = {
       repository        = "personal-page"
       production_branch = "main"
