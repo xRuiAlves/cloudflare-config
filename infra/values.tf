@@ -27,6 +27,13 @@ locals {
       ttl     = 1
       proxied = true
     }
+    music = {
+      name    = "music.ruialves.net"
+      type    = "CNAME"
+      content = "music-axb.pages.dev"
+      ttl     = 1
+      proxied = true
+    }
     python-workshop = {
       name    = "python-workshop.ruialves.net"
       type    = "CNAME"
